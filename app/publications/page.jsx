@@ -39,7 +39,7 @@ const publications = [
 
 const Publications = () => {
     return (
-      <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0 md:mt-12 xl:mt-12"> 
+      <section className="min-h-[80vh] flex flex-col justify-center py-4 xl:py-0 md:mt-2 xl:mt-2"> 
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
