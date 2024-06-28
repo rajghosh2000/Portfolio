@@ -45,13 +45,13 @@ const experience = {
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolores illo sequi, porro sed sunt fugiat itaque, asperiores inventore quo necessitatibus? Voluptatum ad praesentium maiores blanditiis culpa a eaque laudantium.",
   items: [
     {
-      institute: "CSIR-Central Mechanical Engineering Research Institute (CMERI)",
+      institute: "CSIR-CMERI Durgapur",
       position: "Summer Research Intern",
       duration: "May 2021 - July 2021",
       guidedby: "Prof. Rajesh P Barnwal"
     },
     {
-      institute: "Indian Institute of Information Technology Guwahati",
+      institute: "IIIT Guwahati",
       position: "Summer Research Intern",
       duration: "May 2020 - July 2020",
       guidedby: "Prof. Manojit Ghose"
@@ -69,7 +69,7 @@ const experience = {
       guidedby: "Dr. Pijush Chandra Das"
     },
     {
-      institute: "IEEE Student Branch Chapter Tezpur University",
+      institute: "IEEE Student Branch Tezpur University",
       position: "Vice-Chairperson",
       duration: "June 2021 - Dec 2021",
       guidedby: "Dr. Rupam Goswami"
@@ -195,7 +195,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[75vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
@@ -210,13 +210,96 @@ const Resume = () => {
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
-            {/* content */}
+
+            {/* experience */}
             <TabsContent value="experience" className="w-full">
-              experience
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-2xl font-bold">
+                  {experience.title}
+                </h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base">
+                  {experience.desc}
+                </p>
+                <ScrollArea className="h-[400px] lg::min-w-[800px] xl:min-w-[800px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mx-4 my-2">
+                    {experience.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#2b2b32] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md shadow-green-600"
+                        >
+                          <span
+                            className="text-accent text-xs"
+                          >
+                            {item.duration}
+                          </span>
+                          <h3 className={`text-center lg:text-left ${item.position.length > 25 ? 'text-sm' : 'text-base'} max-w-[260px] min-h-[35px]`}>
+                            {item.position}
+                          </h3>
+
+                          <div className="flex items-center gap-3 my-2">
+                            {/* dot */}
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60 text-xs">{item.institute}</p>
+                          </div>
+                          <span className={`text-center lg:text-left ${item.guidedby.length > 20 ? 'text-sm' : 'text-base'}`}>Under: {item.guidedby}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
+
+            {/* education */}
+            <TabsContent value="education" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-2xl font-bold">
+                  {education.title}
+                </h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base">
+                  {education.desc}
+                </p>
+                <ScrollArea className="h-[400px] lg::min-w-[800px] xl:min-w-[800px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mx-4 my-2">
+                    {education.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#2b2b32] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md shadow-green-600"
+                        >
+                          <span
+                            className="text-accent text-xs"
+                          >
+                            {item.duration}
+                          </span>
+                          <h3 className={`text-center lg:text-left ${item.course.length > 25 ? 'text-sm' : 'text-base'} max-w-[260px] min-h-[35px]`}>
+                            {item.course}
+                          </h3>
+
+                          <div className="flex items-center gap-3 my-2">
+                            {/* dot */}
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60 text-xs">{item.institute}</p>
+                          </div>
+                          <span className={`text-center lg:text-left ${item.position.length > 20 ? 'text-sm' : 'text-base'}`}>Under: {item.position}</span>
+                          <span>{item.grade}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
+            {/* skills */}
+            <TabsContent value="skills" className="w-full">
+              skills
+            </TabsContent>
+
           </div>
 
-          
+
         </Tabs>
       </div>
     </motion.div>
