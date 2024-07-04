@@ -42,7 +42,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolores illo sequi, porro sed sunt fugiat itaque, asperiores inventore quo necessitatibus? Voluptatum ad praesentium maiores blanditiis culpa a eaque laudantium.",
+  desc: "Aspiring computer programmer with a MTech (Gold Medalist) degree and proven problem-solving and troubleshooting skills",
   items: [
     {
       institute: "CSIR-CMERI Durgapur",
@@ -98,21 +98,31 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolores illo sequi, porro sed sunt fugiat itaque, asperiores inventore quo necessitatibus? Voluptatum ad praesentium maiores blanditiis culpa a eaque laudantium.",
+  desc: "Aspiring computer programmer with a MTech (Gold Medalist) degree and proven problem-solving and troubleshooting skills",
   items: [
+    {
+      institute: "IIT Kharagpur",
+      position: "Doctor of Philosophy (PhD)",
+      duration: "July 2024 - Ongoing",
+      grade: "",
+      course: "Dept of Computer Science and Engg.",
+      guide: ""
+    },
     {
       institute: "University of Calcutta",
       position: "Master of Technology (M.Tech)",
       duration: "August 2022 - July 2024",
-      grade: "8.66 CGPA",
-      course: "Department of Computer Science and Technology"
+      grade: "8.9 CGPA",
+      course: "Dept of Computer Science and Engg.",
+      guide: "Prof. Nabendu Chaki"
     },
     {
       institute: "Tezpur University",
       position: "Bachelor of Technology (B.Tech)",
       duration: "July 2018 - June 2022",
       grade: "8.44 CGPA",
-      course: "Department of Computer Science and Technology"
+      course: "Dept of Computer Science and Engg.",
+      guide: "Dr. Nabajyoti Medhi"
     },
     {
       institute: "Maharishi Vidya Mandir Senior Secondary School, Guwahati, Assam",
@@ -126,7 +136,7 @@ const education = {
       position: "High Secondary",
       duration: "2014 - 2016",
       grade: "9.6 CGPA",
-      course: ""
+      course: "Overall Subjects"
     }
   ]
 }
@@ -217,7 +227,7 @@ const Resume = () => {
                 <h3 className="text-2xl font-bold">
                   {experience.title}
                 </h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base">
+                <p className="max-w-[800px] text-white/60 mx-auto xl:mx-0 text-base">
                   {experience.desc}
                 </p>
                 <ScrollArea className="h-[400px] lg::min-w-[800px] xl:min-w-[800px]">
@@ -257,10 +267,10 @@ const Resume = () => {
                 <h3 className="text-2xl font-bold">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-base">
+                <p className="max-w-[800px] text-white/60 mx-auto xl:mx-0 text-base">
                   {education.desc}
                 </p>
-                <ScrollArea className="h-[400px] lg::min-w-[800px] xl:min-w-[800px]">
+                <ScrollArea className="h-[400px] lg:min-w-[800px] xl:min-w-[800px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mx-4 my-2">
                     {education.items.map((item, index) => {
                       return (
@@ -273,17 +283,17 @@ const Resume = () => {
                           >
                             {item.duration}
                           </span>
-                          <h3 className={`text-center lg:text-left ${item.course.length > 25 ? 'text-sm' : 'text-base'} max-w-[260px] min-h-[35px]`}>
+                          <h3 className={`text-center lg:text-left ${item.course.length > 25 ? 'text-xs' : 'text-base'} max-w-[260px] min-h-[35px]`}>
                             {item.course}
                           </h3>
-
+                          <span className={`text-center lg:text-left ${item.position.length > 20 ? 'text-sm' : 'text-base'}`}>{item.position}</span>
                           <div className="flex items-center gap-3 my-2">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60 text-xs">{item.institute}</p>
                           </div>
-                          <span className={`text-center lg:text-left ${item.position.length > 20 ? 'text-sm' : 'text-base'}`}>Under: {item.position}</span>
-                          <span>{item.grade}</span>
+                          <span className="text-white/80 text-xs">{item.grade}</span>
+                          <span className="text-white text-sm">{item.guide ? `Guided By: ${item.guide}` : ''}</span>
                         </li>
                       );
                     })}
