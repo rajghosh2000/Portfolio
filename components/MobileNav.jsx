@@ -12,27 +12,27 @@ const links = [
     },
     {
         name: "about",
-        path: "/about"
+        path: "./about"
     },
     {
         name: "resume",
-        path: "/resume"
+        path: "./resume"
     },
     {
         name: "projects",
-        path: "/projects"
+        path: "./projects"
     },
     {
         name: "publications",
-        path: "/publications"
+        path: "./publications"
     },
     {
         name: "patents",
-        path: "/patents"
+        path: "./patents"
     },
     {
         name: "contact",
-        path: "/contact"
+        path: "./contact"
     },
 ]
 
