@@ -7,33 +7,33 @@ import { motion } from 'framer-motion';
 const publications = [
   {
     num: '01',
-    title: 'abc',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis.',
-    href: '#'
+    title: 'RISP-SDN: Reputation Aware IoMT Service Provisioning Using SDN in Edge/Fog-Based Systems',
+    desc: 'K. Ray, N. Medhi, R. Ghosh, P. Das, V. Deka, S. Misra, "RISP-SDN: Reputation Aware IoMT Service Provisioning Using SDN in Edge/Fog-Based Systems," IEEE Global Communications Conference (GLOBECOM)-2023',
+    href: 'https://ieeexplore.ieee.org/abstract/document/10437852'
   },
   {
     num: '02',
-    title: 'abc',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis.',
-    href: '#'
+    title: 'Performances of M2M Protocols in Internet of Medical Things',
+    desc: 'K Das, T Dutta, K. Ray, R Ghosh, D Goswami, A Dey, P Phukan, P Das, V K Deka, N Medhi, “Performances of M2M Protocols in Internet of Medical Things,” IEEE 2nd Workshop on SIGNIS: Softwarized Next Generation Networks for IoT Services, 2023',
+    href: 'https://ieeexplore.ieee.org/abstract/document/10283663'
   },
   {
     num: '03',
-    title: 'abc',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis.',
-    href: '#'
+    title: 'Resource aware Fog based Remote Health Monitoring System',
+    desc: 'D. H. Barbhuiya, A. Dey, R. Ghosh, K. Das, K. Ray and N. Medhi, “Resource Aware Fog Based Remote Health Monitoring System,” IEEE INFOCOM 2022 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2022, pp. 1-6',
+    href: 'https://ieeexplore.ieee.org/abstract/document/9798058'
   },
   {
     num: '04',
-    title: 'abc',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis.',
-    href: '#'
+    title: 'Study of Horizontal Impact Forces Arising from Terrain on Off-Road Vehicles and Minimizing Their Effects on Ride Quality',
+    desc: 'B. Das, R. Ghosh, “Study of Horizontal Impact Forces Arising from Terrain on Off-Road Vehicles and Minimizing Their Effects on Ride Quality”, AIJR Proceedings, 2021, pp. 134-142',
+    href: 'https://books.aijr.org/index.php/press/catalog/book/115/chapter/1132'
   },
   {
     num: '05',
-    title: 'abc',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis.',
-    href: '#'
+    title: 'Deep Learning Based Approach For Prediction Of Glass Transaction Temperature In Polymers',
+    desc: 'Goswami, S., Ghosh, R., Neog, A., Das, B. (2021). Deep Learning Based Approach For Prediction Of Glass Transaction Temperature In Polymers. Published in International Conference on Advances in Material Science, Communication and Microelectronics (ICAMCM) 2021',
+    href: 'https://www.sciencedirect.com/science/article/pii/S2214785321018836'
   },
 ]
 
@@ -68,7 +68,7 @@ const Publications = () => {
                   </div>
 
                   {/* TITLE */}
-                  <h2 className="text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 ">
+                  <h2 className="text-[22px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 ">
                     {pub.title}
                   </h2>
 

@@ -1,6 +1,6 @@
 const Patent = () => {
     return (
-      <div>patent page</div>
+      <div>Under Development</div>
     )
   }
   

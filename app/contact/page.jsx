@@ -18,12 +18,12 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    desc: "IIT Kharagpur, West Bengal, 700048"
+    desc: "IIT Kharagpur, West Bengal"
   },
   {
     icon: <LiaGlobeSolid />,
     title: "Website",
-    desc: "http://abc.com"
+    desc: "https://rajghosh2000.github.io/Portfolio/"
   }
 ]
 
@@ -59,7 +59,7 @@ const Contact = () => {
                       </div>
                       <div className="flex-1">
                         <p className="text-white/60 text-sm text-center my-2">{item.title}</p>
-                        <h3 className="text-base text-center">{item.desc}</h3>
+                        <h3 className={`text-center ${item.desc.length > 27 ? 'text-xs' : 'text-sm'}`}>{item.desc}</h3>
                       </div>
                     </li>
                   );
@@ -70,7 +70,7 @@ const Contact = () => {
 
 
           {/* Footer */}
-          <div>footer</div>
+          {/* <div>Under Development</div> */}
         </div>
       </div>
     </motion.section>

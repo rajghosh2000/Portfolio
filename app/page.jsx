@@ -19,8 +19,12 @@ const Home = () => {
             <h1 className="h2 mb-6">
               Hello I'm <br /> <span className="text-accent h1">Rajdeep Ghosh</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, totam.
+            <p className="max-w-[600px] mb-9 text-white/80 text-lg">
+              Ph.D. Research Scholar at IIT Kharagpur focused in the venture of Computer Science and Engineering. 
+            </p>
+
+            <p className="max-w-[600px] mb-9 text-white/80 text-base">
+              My areas of interest is mainly in the domain of IoT and Cloud Computing.
             </p>
             {/* CV and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

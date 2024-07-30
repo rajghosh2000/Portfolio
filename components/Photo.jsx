@@ -26,6 +26,7 @@ const Photo = () => {
                 >
                     <Image
                         src="./assets/profile_2.png"
+                        //src="/assets/profile_2.png"
                         priority
                         quality={100}
                         fill
