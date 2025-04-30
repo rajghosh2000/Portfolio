@@ -6,11 +6,6 @@ import { motion } from "framer-motion";
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    desc: "(+91) 6000 876 674",
-  },
-  {
     icon: <FaEnvelope />,
     title: "Email",
     desc: "rajghosh2507@gmail.com"
